@@ -1,3 +1,38 @@
+header{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 50px;
+}
+
+script{
+    display: grid;
+    grid-template-columns: span 9;
+    grid-template-rows: span 2;
+    background-color: pink;
+}
+
+nav{
+    background-color:maroon;
+    display: grid;
+    grid-column: 1/10;
+    grid-row: span 1;
+
+}
+
+
+nav a{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+
+nav a:hover{
+    background-color: #fff;
+    width: auto;
+    height: auto;   
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -6,34 +41,17 @@ body{
     color: rgb(0, 0, 0);
 }
 
-.container{
-    background-color: #fff;
-    grid-row-gap: 5px;
-    grid-column: 5px;
-}
-
-nav{
-    background-color:maroon;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 1fr;
-    margin-top: 50px;
-}
-
-nav{
-    width: 80%;
+article a{
+    width: 970px;
+    height: 50px;
     margin: 0 auto;
-    padding: 0;
+    transition: transform .2s;
+    padding: 15px;
 }
 
-nav a{
-    list-style: none;
-    display: inline-block;
-    padding: 20px;
-}
-
-a:hover{
+article a:hover{
     background-color:rgb(147, 120, 188);
+    transform: scale(1,2);
 }
 
 nav a{
@@ -41,10 +59,26 @@ nav a{
      text-decoration: none;
 }
 
+.toggle{
+    display: none;
+}
+
+.menu_hidden {
+    display: none;
+}
+
 main{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(10, 1fr);
+}
+
+table{
+    background-color: purple;
+}
+
+table tr{
+    background-color: hotpink;
 }
 
 aside{
@@ -55,14 +89,15 @@ aside{
     display: grid;
 }
 
-aside img{
-    margin: auto;
+aside a{ 
+    color: #fff;
+    text-decoration: none;
+    text-align: right;
 }
 
 article{
     grid-row: span 9;
     grid-column: span 5;
-    background-color: white;
     display: grid;
 }
 
@@ -70,6 +105,8 @@ article a{
     color: black;
     white-space: inherit;
     text-decoration: none;
+    background-color: turquoise;
+    display: grid;
 }
 
 .main_article{
@@ -77,6 +114,14 @@ article a{
     grid-row: span 5;
     background-color: pink;
     display: grid;
+    margin-right: auto; 
+    margin-left: auto;
+    padding: 50px;
+}
+
+.main_article img :hover{
+    width: 1050px;
+    height: 650px;
 }
 
 .aside2{
@@ -84,10 +129,58 @@ article a{
     grid-column: span 9;
     background-color:yellow;
     display: grid;
+    text-align: center;
 }
 
+.img_index{
+    display:block;
+}
 
-@media (max-width: 400px){
+.small_img_index{
+    display: none;
+}
+
+.hov{
+    text-align: center;
+}
+
+.hov p:hover{
+    color: blueviolet;
+}
+
+@media only screen and (max-device-width: 340px){
+    
+    .img_index{
+        display:none;
+    }
+
+    .small_img_index{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+    aside {
+        display: none;
+    }
+
+    article a{
+        color: black;
+        text-decoration: none;
+        background-color: turquoise;
+        display: block;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 60px;
+        height: 30px;
+        margin: auto;
+        transition: transform .2s;
+        padding: 15px;
+        font-size: 15px;
+    }
+
+
     .menu_hidden {
         display: none;
     }
@@ -96,16 +189,15 @@ article a{
         display: block;
     }
     
-
-    .active{
-        display: block;
-    }
-
     nav{
         width: 100%;
         background-color:rgb(86, 64, 96);
         display: block;
         text-align: center;
+    }
+
+    main{
+        display: block;
     }
 
     footer{
@@ -121,3 +213,4 @@ article a{
     }
 
 }
+

@@ -8,58 +8,60 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
     <title>yaaaaas</title>
 </head>
-<header>
+
+
+<body> 
+    <header>
     <div class=container> 
-        <div class="toggle">
-            <i class="material-icons" onclick="toggleMenu()">menu</i> 
-        </div>
-        <nav class="menu menu_hidden">
-                <!-- <ul class="menu menu_hidden"> -->
-            <a href="menu.html">Home</a>
-            <a href="top.html">Top</a>
-            <a href="latest.html">Latest</a>
-            <a href="game.html">Games</a>
-            <a href="tv.html">TV</a>
-            <a href="movies.html">Movies</a>
-            <a href="comics.html">Comics</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About us</a>
-                <!-- </ul> -->
-        </nav>          
-        <script src="js/menu.js"></script>
-        <script type="text/javascript">
-        </script>
+        <i class="material-icons" onclick="toggleMenu()">menu</i> 
+    </div>
+     <nav class="menu menu_hidden">
+        <!-- <ul class="menu menu_hidden"> -->
+        <a href="index.html">Home</a>
+        <a href="top.html">Top</a>
+        <a href="latest.html">Latest</a>
+        <a href="game.html">Games</a>
+        <a href="tv.html">TV</a>
+        <a href="movies.html">Movies</a>
+        <a href="comics.html">Comics</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About us</a>
+        <!-- </ul> -->
+    </nav> 
+
+    <script src="js/menu.js"></script>
+    <script type="text/javascript">
+    </script>
 
 </header>
-<body> 
-    
     <main>
         <aside>
-            <nav>
-                <p>hola</p>
-                <p>como</p>
-                <p>esta</p>
-            </nav>
-            <img src="img/cutepotato.jpg" alt="cute kawaii potato" height="200" width="200">
+            <table border="1" cellpadding="5" cellspacing="5">
+                <tr><td>Today</td><td>This Week</td><td>This Month</td></tr>
+            </table>
+
+            <img src="img/cutepotato.jpg" alt="cute kawaii potato" height="80" width="80">
+            <a href="article.html">Cute potato breaks the memes</a>
+            <img src="img/cutepotato.jpg" alt="cute kawaii potato" height="80" width="80">
+            <a href="article.html">Cute potato breaks the memes</a>
+            <img src="img/cutepotato.jpg" alt="cute kawaii potato" height="80" width="80">
+            <a href="article.html">Cute potato breaks the memes</a>
+
         </aside>
         <article>
-            <div class="main_article">
-                <a href="article.html">Infinity War breaks the box office</a>
-
-                <img src="img/infinity.jpg" alt="Infinity War" height="400" width="700">
-
-                <a href="article.html">Infinity War breaks the box office</a>
-                
-                <img src="img/infinity.jpg" alt="Infinity War" height="400" width="700">
-            </div>
+           <%=yield%>
         </article>
         <aside>
             <div class="aside2">
-                <p>hej</p>
+                <h4>Trending</h4>
                 <img src="img/panda.jpg" alt="cute panda" height="200" width="200">
             </div>
         </aside>
     </main>
-</div>
+    
+    <footer>
+        <p>Contact us</p>
+    </footer>
+
 </body>
 </html>
